@@ -42,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
       });
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +69,9 @@ class _LoginPageState extends State<LoginPage> {
               decoration: InputDecoration(
                 labelText: 'Username',
                 labelStyle: TextStyle(
-                  color: _usernameFocusNode.hasFocus ? Theme.of(context).colorScheme.secondary : _unfocusedColor,
+                  color: _usernameFocusNode.hasFocus
+                      ? Theme.of(context).colorScheme.secondary
+                      : _unfocusedColor,
                 ),
               ),
               focusNode: _usernameFocusNode,
@@ -87,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                         : _unfocusedColor),
               ),
               focusNode: _passwordFocusNode,
-              ),
+            ),
             ButtonBar(
               // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
